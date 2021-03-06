@@ -1,0 +1,44 @@
+textarea,
+pre,
+code {
+    font-family: Roboto Mono;
+    font-size: 16px;
+}
+
+pre {
+    border: 1px solid #ced4da;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+code {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1ch;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+code,
+textarea {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: normal;
+}
+
+textarea {
+    grid-column: 2;
+    caret-color: black;
+    background: transparent;
+    color: transparent;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
