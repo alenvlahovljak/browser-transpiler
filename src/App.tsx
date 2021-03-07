@@ -14,8 +14,8 @@ function App() {
     const startService = async (): Promise<void> => {
         ref.current = await esbuild.startService({
             // It's better to use Web Worker for WASM
-            // to prevent blocking UI thread.
-            // It's consumed by default.
+            // to prevent blocking the UI thread.
+            // WASM is using it by default.
             // worker: true,
             wasmURL: 'esbuild.wasm'
         });
