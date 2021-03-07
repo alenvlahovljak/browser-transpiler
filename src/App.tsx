@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef, ChangeEvent, MutableRefObject, RefObject} from "react";
+import {useState, useEffect, useRef, ChangeEvent } from "react";
 import * as esbuild from 'esbuild-wasm';
 import {Container, Row, Col, Navbar, NavbarBrand, FormGroup, Label, Input, Button} from "reactstrap";
 
@@ -48,7 +48,7 @@ function App() {
                     <FormGroup>
                         <Label for="code">Insert your code:</Label>
                         <Code id='code' language="js" value={input} onChange={setInput}/>
-                        <Button className='mb-3' color="success" onClick={()=> onClick()}>Transpile!</Button>
+                        <Button className='mb-3' color="success" onClick={(): Promise<void>=> onClick()}>Transpile!</Button>
                     </FormGroup>
                 </Col>
                 <Col sm='12'>
