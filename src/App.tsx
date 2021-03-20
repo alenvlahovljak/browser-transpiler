@@ -24,7 +24,7 @@ function App() {
     };
 
     useEffect((): void => {
-        startService();
+        startService().then(()=> console.log('WASM is running!'));
     }, []);
 
     const onClick = async (): Promise<void> => {
